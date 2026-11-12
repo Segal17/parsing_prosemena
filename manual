@@ -1,0 +1,13 @@
+
+# один раз
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+
+# каждый прогон
+python main.py              # → json_data/*.json
+python make_xlsx.py         # → xlsx_data/*.xlsx (авто)
+# или
+python make_xlsx.py --xls   # → xlsx_data/*.xls  (Excel 2003)
+# или
+python make_xlsx.py --csv   # → xlsx_data/*.csv  (универсально)
